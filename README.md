@@ -20,8 +20,6 @@ CarouselLayoutManager for RecyclerView
 	}  
 ```
 
-Please replace `version` with the latest version: [![Download](https://api.bintray.com/packages/minyushov/android/carousel/images/download.svg)](https://bintray.com/minyushov/android/carousel/_latestVersion)
-
 
 ## Description
 
