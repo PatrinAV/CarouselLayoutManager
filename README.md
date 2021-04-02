@@ -8,13 +8,16 @@ CarouselLayoutManager for RecyclerView
 ## Integration
 
 ```
-repositories {
-  maven { url  "https://dl.bintray.com/minyushov/android" }
-}
-
-dependencies {
-  implementation 'com.minyushov.android:carousel:version'
-}
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+  
+	dependencies {
+	        implementation 'com.github.PatrinAV:CarouselLayoutManager:Tag'
+	}  
 ```
 
 Please replace `version` with the latest version: [![Download](https://api.bintray.com/packages/minyushov/android/carousel/images/download.svg)](https://bintray.com/minyushov/android/carousel/_latestVersion)
