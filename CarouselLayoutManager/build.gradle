@@ -1,24 +1,23 @@
 buildscript {
   ext {
-    androidMinSdkVersion = 14
-    androidCompileSdkVersion = 30
-    androidTargetSdkVersion = 30
-    androidSupportLibraryVersion = "27.1.1"
+    androidMinSdkVersion = 23
+    androidCompileSdkVersion = 36
+    androidTargetSdkVersion = 36
   }
 
   repositories {
-    jcenter()
+    mavenCentral()
     google()
   }
 
   dependencies {
-    classpath 'com.android.tools.build:gradle:4.1.3'
+    classpath 'com.android.tools.build:gradle:8.5.2'
   }
 }
 
 allprojects {
   repositories {
-    jcenter()
+    mavenCentral()
     google()
   }
 }

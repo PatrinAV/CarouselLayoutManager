@@ -1,7 +1,10 @@
-apply plugin: 'com.android.library'
+plugins {
+	id 'com.android.library'
+	id 'maven-publish'
+}
 
 android {
-	resourcePrefix "carousellayoutmanager__"
+	namespace 'com.azoft.carousellayoutmanager'
 	compileSdkVersion androidCompileSdkVersion
 
 	defaultConfig {
@@ -12,13 +15,31 @@ android {
 	configurations {
 		documentation
 	}
-
-	libraryVariants.all {
-		it.generateBuildConfig.enabled = false
+	publishing {
+		singleVariant("release")
 	}
 }
 
 dependencies {
-	implementation "com.android.support:recyclerview-v7:$androidSupportLibraryVersion"
-	documentation "com.android.support:support-annotations:$androidSupportLibraryVersion"
+	implementation "androidx.annotation:annotation:1.9.1"
+	implementation "androidx.recyclerview:recyclerview:1.4.0"
+	implementation "androidx.appcompat:appcompat:1.7.1"
+}
+
+afterEvaluate {
+	publishing {
+		publications {
+			release(MavenPublication) {
+				from components["release"]
+
+				groupId = 'com.github.PatrinAV'
+				artifactId = 'CarouselLayoutManager'
+				version = '1.1.18'
+
+				pom {
+					name.set('CarouselLayoutManager')
+				}
+			}
+		}
+	}
 }

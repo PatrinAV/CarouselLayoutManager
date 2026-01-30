@@ -1,11 +1,7 @@
 package com.azoft.carousellayoutmanager.sample;
 
-import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +17,11 @@ import com.azoft.carousellayoutmanager.CenterScrollListener;
 import com.azoft.carousellayoutmanager.DefaultChildSelectionListener;
 import com.azoft.carousellayoutmanager.sample.databinding.ActivityCarouselPreviewBinding;
 import com.azoft.carousellayoutmanager.sample.databinding.ItemViewBinding;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class CarouselPreviewActivity extends AppCompatActivity {
     private static final String TAG = "Carousel";
