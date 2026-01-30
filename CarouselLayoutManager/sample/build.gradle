@@ -1,25 +1,25 @@
 apply plugin: 'com.android.application'
 
 android {
-  namespace 'com.azoft.carousellayoutmanager.sample'
+	namespace 'com.azoft.carousellayoutmanager.sample'
 
-  compileSdkVersion androidCompileSdkVersion
+	compileSdkVersion androidCompileSdkVersion
 
-  defaultConfig {
-    applicationId "com.azoft.carousellayoutmanager.sample"
-    minSdkVersion androidMinSdkVersion
-    targetSdkVersion androidTargetSdkVersion
-    versionCode 1
-    versionName "1.0"
-  }
+	defaultConfig {
+		applicationId "com.azoft.carousellayoutmanager.sample"
+		minSdkVersion androidMinSdkVersion
+		targetSdkVersion androidTargetSdkVersion
+		versionCode 1
+		versionName "1.0"
+	}
 
-  dataBinding {
-    enabled = true
-  }
+	dataBinding {
+		enabled = true
+	}
 }
 
 dependencies {
-  implementation project(':carousel')
+	implementation project(':carousel')
 	implementation "androidx.recyclerview:recyclerview:1.4.0"
 	implementation "androidx.appcompat:appcompat:1.7.1"
 	implementation "com.google.android.material:material:1.13.0"

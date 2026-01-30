@@ -1,27 +1,27 @@
 buildscript {
-  ext {
-    androidMinSdkVersion = 23
-    androidCompileSdkVersion = 36
-    androidTargetSdkVersion = 36
-  }
+	ext {
+		androidMinSdkVersion = 23
+		androidCompileSdkVersion = 36
+		androidTargetSdkVersion = 36
+	}
 
-  repositories {
-    mavenCentral()
-    google()
-  }
+	repositories {
+		mavenCentral()
+		google()
+	}
 
-  dependencies {
-    classpath 'com.android.tools.build:gradle:8.5.2'
-  }
+	dependencies {
+		classpath 'com.android.tools.build:gradle:8.5.2'
+	}
 }
 
 allprojects {
-  repositories {
-    mavenCentral()
-    google()
-  }
+	repositories {
+		mavenCentral()
+		google()
+	}
 }
 
 task clean(type: Delete) {
-  delete rootProject.buildDir
+	delete rootProject.buildDir
 }
